@@ -1,0 +1,47 @@
+{
+  "produtos": [
+    {
+      "id": 0,
+      "name": "Super Mario World",
+      "imgURL": "./assets/img/jogo1.png",
+      "desc": "O melhor jogo ja criado, agora em todas as plataformas",
+      "altTxt": "Super Mario World",
+      "price": 300
+    },{
+      "id": 1,
+      "name": "God of War - Ragnarok",
+      "imgURL": "./assets/img/jogo2.png",
+      "desc": "'Toma.' - Kratos",
+      "altTxt": "GoW - Ragnarok",
+      "price": 200
+    },{
+      "id": 2,
+      "name": "Super Bundle",
+      "imgURL": "./assets/img/jogo3.png",
+      "desc": "500 Jogos em um único pacote. Aproveite!",
+      "altTxt": "Bundle 500 jogos",
+      "price": 1400
+    },{
+      "id": 3,
+      "name": "Blake Stone",
+      "imgURL": "./assets/img/jogo4.png",
+      "desc": "Por que o Diskete não foi o suficiente para conter este colosso.",
+      "altTxt": "BS-image",
+      "price": 1000
+    },{
+      "id": 4,
+      "name": "Counter-Strike 2",
+      "imgURL": "./assets/img/jogo5.png",
+      "desc": "Cançou da paz? Venha para o CS2.",
+      "altTxt": "CS2-image",
+      "price": 36
+    },{
+      "id": 5,
+      "name": "Tibia Coins",
+      "imgURL": "./assets/img/jogo6.png",
+      "desc": "Upe mais rapido com a Tibia Coin mais barata do MUNDO!!!!!",
+      "altTxt": "Tibia Coins",
+      "price": 149999
+    }
+  ]
+}

@@ -17,4 +17,12 @@ export class InicioComponent {
       this.produtos = produtos;
     });
   }
+
+  retiraEstoque(produto: Produto) {
+    this.produtoService.postVenda(produto).then(() => {});
+  
+    this.produtoService.deleteProduct(produto.id).then(() => {
+      this.produtos = this.produtos.filter((p) => p.id !== produto.id);
+    })
+  }
 }
