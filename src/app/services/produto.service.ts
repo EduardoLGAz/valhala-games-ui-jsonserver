@@ -15,18 +15,24 @@ export class ProdutoService {
     const response = await fetch(this.url);
     return await response.json() ?? [];
   }
-
-  async getProductId(id: number): Promise<Produto | undefined> {
-    const response = await fetch(`${this.url}/${id}`);
-    return await response.json() ?? {};    
+  
+  async putProduct(produto: Produto): Promise<void> {
+    await fetch(`${this.url}/${produto.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(produto)
+    });  
   }
 
+  
   async deleteProduct(id: number): Promise<void> {
     await fetch(`${this.url}/${id}`, {
       method: 'DELETE'
     });       
   }
-  async postVenda(produto: Produto): Promise<void> {
+  async postVenda(produto: Produto | undefined): Promise<void> {
     await fetch(this.urlVendas, {
       method: 'POST',
       headers: {
@@ -34,5 +40,22 @@ export class ProdutoService {
       },
       body: JSON.stringify(produto)
     });
+  }
+  async getVendaId(id: number): Promise<Produto | undefined> {
+    const response = await fetch(`${this.urlVendas}/${id}`);
+    if(response.status === 404) {
+      return undefined;
+    }
+    return await response.json() ?? {};    
+  }
+
+  async putVenda(produto: Produto): Promise<void> {
+    await fetch(`${this.urlVendas}/${produto.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(produto)
+    });  
   }
 }

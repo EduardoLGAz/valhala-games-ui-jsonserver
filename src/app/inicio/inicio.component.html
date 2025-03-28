@@ -43,8 +43,9 @@
         </mat-card-content>
         <mat-card-actions>
           <p>R$ {{produto.price}},00</p>
-          <button mat-button (click)="retiraEstoque(produto)">Comprar</button>
+          <button mat-button (click)="realizaVenda(produto)">Comprar</button>
         </mat-card-actions>
+        <p style="text-align: center;">Disponiveis: {{produto.stock}}</p>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

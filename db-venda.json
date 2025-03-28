@@ -1,5 +1,31 @@
 {
   "produtos": [
-    
+    {
+      "id": "1",
+      "name": "God of War - Ragnarok",
+      "imgURL": "./assets/img/jogo2.png",
+      "desc": "'Toma.' - Kratos",
+      "altTxt": "GoW - Ragnarok",
+      "price": 200,
+      "stock": 1
+    },
+    {
+      "id": "2",
+      "name": "Super Bundle",
+      "imgURL": "./assets/img/jogo3.png",
+      "desc": "500 Jogos em um único pacote. Aproveite!",
+      "altTxt": "Bundle 500 jogos",
+      "price": 1400,
+      "stock": 3
+    },
+    {
+      "id": "0",
+      "name": "Super Mario World",
+      "imgURL": "./assets/img/jogo1.png",
+      "desc": "O melhor jogo ja criado, agora em todas as plataformas",
+      "altTxt": "Super Mario World",
+      "price": 300,
+      "stock": 2
+    }
   ]
 }

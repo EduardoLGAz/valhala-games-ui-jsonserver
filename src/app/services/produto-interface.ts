@@ -5,4 +5,5 @@ export interface Produto {
     desc: string;
     altTxt: string;
     price: number;
+    stock: number;
 }
