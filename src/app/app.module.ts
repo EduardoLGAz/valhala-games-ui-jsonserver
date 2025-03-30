@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CommonModule } from '@angular/common';
+import { ProdutoAddComponent } from './produto-add/produto-add.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { CommonModule } from '@angular/common';
     InicioComponent,
     LoginComponent,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    ProdutoAddComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatMenuModule,
     MatToolbarModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

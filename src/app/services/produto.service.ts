@@ -7,7 +7,7 @@ import { Produto } from './produto-interface';
 export class ProdutoService {
 
   url = 'http://localhost:3000/produtos';
-  urlVendas = 'http://localhost:3500/produtos';
+  urlVendas = 'http://localhost:3000/vendas';
   
   constructor() { }
 
@@ -25,7 +25,15 @@ export class ProdutoService {
       body: JSON.stringify(produto)
     });  
   }
-
+  async postProduct(produto: Produto | undefined): Promise<void> {
+    await fetch(this.url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(produto)
+    });
+  }
   
   async deleteProduct(id: number): Promise<void> {
     await fetch(`${this.url}/${id}`, {

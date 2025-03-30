@@ -1,61 +1,54 @@
-main{
-    min-height: 500px;
+main {
+  text-align: center;
+  min-height: 500px;
+}
+.div-botao-add {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
 }
 
-#section-banner{
-    min-height: 400px;
+mat-grid-list {
+  margin-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; /* Espaçamento entre os cards */
 }
 
-#section-banner img{
-    height: 500px;
+mat-grid-tile {
+  flex: 1 1 calc(25% - 16px); /* Cards ocupam 25% da largura com espaçamento */
+  max-width: 300px; /* Limita a largura máxima */
+  box-sizing: border-box;
+  padding: 8px;
 }
 
-h2{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 5px;
+mat-card {
+  width: 100%; /* Garante que o card ocupe toda a largura do container */
+  text-align: center;
 }
 
-.example-card {
-    max-width: 400px;
+mat-card img {
+  height: auto;
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do card */
+  aspect-ratio: 1 / 1; /* Define um espaço quadrado */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+@media (max-width: 768px) {
+  mat-grid-tile {
+    flex: 1 1 calc(50% - 16px); /* Ajusta para 2 cards por linha em telas menores */
   }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: auto;
-  }
-  
-  mat-grid-list{
-    margin: 10px 0px;
-  }
-
-  mat-grid-tile{
-    padding: 2px;
-    border-radius: 30px;
 }
 
-mat-card-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 480px) {
+  mat-grid-tile {
+    flex: 1 1 100%; /* Ajusta para 1 card por linha em telas muito pequenas */
+  }
 }
-
-mat-card-actions{
-    display: flex;
-    justify-content: space-around;
-  }  
-
-  mat-card-actions p{
-    color: red;
-    font-size: 30px;
-  }
-
-  mat-card img{
-    height: 300px;
-    width: 300px;
-  }
-
-
-
-
-

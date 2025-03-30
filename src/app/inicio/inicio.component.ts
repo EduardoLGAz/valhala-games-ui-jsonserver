@@ -35,7 +35,7 @@ export class InicioComponent {
         this.produtoService.putVenda(venda).then(() => {
         });
       }else{
-        this.produtoVendido = produto;
+        this.produtoVendido = {...produto};
         if (this.produtoVendido){
           this.produtoVendido.stock = 1;
         }

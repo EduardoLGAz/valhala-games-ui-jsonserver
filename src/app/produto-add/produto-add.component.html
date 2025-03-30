@@ -1,0 +1,38 @@
+<form #produtoForm="ngForm" class="produto-form" (ngSubmit)="adicionaProduto()">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" id="name" name="name" [(ngModel)]="produto.name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Image URL</mat-label>
+        <input matInput type="text" id="imgURL" name="imgURL" [(ngModel)]="produto.imgURL" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput id="desc" name="desc" [(ngModel)]="produto.desc" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Alt Text</mat-label>
+        <input matInput type="text" id="altTxt" name="altTxt" [(ngModel)]="produto.altTxt" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" id="price" name="price" [(ngModel)]="produto.price" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number" id="stock" name="stock" [(ngModel)]="produto.stock" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput type="number" id="id" name="id" [(ngModel)]="produto.id" required />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!produtoForm.valid">Add Product</button>
+</form>

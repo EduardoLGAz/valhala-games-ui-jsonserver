@@ -1,0 +1,39 @@
+
+/* Centraliza o formulário na página */
+.produto-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estiliza os campos do formulário */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Botão de envio */
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #303f9f;
+  }
+  
+  /* Ajusta o layout para dispositivos menores */
+  @media (max-width: 768px) {
+    .produto-form {
+      padding: 15px;
+    }
+  
+  }
